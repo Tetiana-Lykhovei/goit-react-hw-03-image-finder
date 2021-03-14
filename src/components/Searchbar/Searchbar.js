@@ -13,7 +13,7 @@ class Searchbar extends Component {
 
   handleInputChange = (event) => {
     const { currentTarget } = event;
-    this.setState({ query: currentTarget.query });
+    this.setState({ query: currentTarget.value });
   };
 
   render() {

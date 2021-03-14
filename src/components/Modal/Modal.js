@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import s from "./Modal.modal.css";
+import s from "./Modal.module.css";
 
 class Modal extends Component {
   componentDidMount() {
@@ -8,8 +8,8 @@ class Modal extends Component {
   componentWillUnmount() {
     window.removeEventListener("keydown", this.handleKeyDown);
   }
-  handleKeyDown = (e) => {
-    if (e.code === "Escape") {
+  handleKeyDown = (event) => {
+    if (event.code === "Escape") {
       this.props.showModal();
     }
   };

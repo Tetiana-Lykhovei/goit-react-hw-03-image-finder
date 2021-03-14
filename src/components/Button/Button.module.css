@@ -23,3 +23,10 @@
 .Button:focus {
   background-color: #303f9f;
 }
+
+.BtnCentered {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 15px;
+}

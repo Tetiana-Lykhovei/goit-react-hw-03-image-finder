@@ -24,16 +24,16 @@ class App extends Component {
       behavior: "smooth",
     });
   }
-  handleSubmitForm = (query) => {
-    if (query) {
+  handleSubmitForm = (value) => {
+    if (value) {
       this.setState({ isLoading: true });
 
-      getFetch(query, 1)
+      getFetch(value, 1)
         .then(({ data }) => data.hits)
         .then((data) =>
           this.setState({
             gallery: data,
-            query: query,
+            query: value,
             page: 2,
             isLoading: false,
             button: data.length === 12,
@@ -61,6 +61,7 @@ class App extends Component {
       return { page: state.page + 1 };
     });
   };
+
   showModal = (img) => {
     const { modal } = this.state;
     img

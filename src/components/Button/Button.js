@@ -3,9 +3,11 @@ import s from "./Button.module.css";
 
 const Button = ({ loadMore }) => {
   return (
-    <button onClick={loadMore} className={s.Button}>
-      Load more
-    </button>
+    <div className={s.BtnCentered}>
+      <button onClick={loadMore} className={s.Button}>
+        Load more
+      </button>
+    </div>
   );
 };
 export default Button;
