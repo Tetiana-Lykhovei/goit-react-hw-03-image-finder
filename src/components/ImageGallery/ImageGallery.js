@@ -2,10 +2,10 @@ import ImageGalleryItem from "../ImageGalleryItem/ImageGalleryItem";
 import propTypes from "prop-types";
 import s from "./ImageGallery.module.css";
 
-const ImageGallery = ({ images, openModal }) => {
+const ImageGallery = ({ gallery, openModal }) => {
   return (
     <ul className={s.ImageGallery}>
-      {images.map((img) => (
+      {gallery.map((img) => (
         <ImageGalleryItem openModal={openModal} img={img} key={img.id} />
       ))}
     </ul>
@@ -14,6 +14,6 @@ const ImageGallery = ({ images, openModal }) => {
 export default ImageGallery;
 
 ImageGallery.propTypes = {
-  images: propTypes.array.isRequired,
+  gallery: propTypes.array.isRequired,
   openModal: propTypes.func.isRequired,
 };

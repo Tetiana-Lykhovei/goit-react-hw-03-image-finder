@@ -1,4 +1,5 @@
 import axios from "axios";
+import propTypes from "prop-types";
 
 const getFetch = (query, page) => {
   let key = `19872404-8517b83978ef96fd2196e3bf4`;
@@ -19,3 +20,8 @@ const getFetch = (query, page) => {
 // }
 
 export default getFetch;
+
+getFetch.propTypes = {
+  query: propTypes.string,
+  page: propTypes.number,
+};

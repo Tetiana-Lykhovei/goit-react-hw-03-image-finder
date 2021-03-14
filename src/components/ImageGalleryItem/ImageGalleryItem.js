@@ -9,7 +9,7 @@ const ImagesGalleryItem = ({ img, openModal }) => {
         onClick={() => openModal(img)}
         src={webformatURL}
         alt={tags}
-        className="ImageGalleryItem-image"
+        className={s.ImageGalleryItemImage}
       />
     </li>
   );
