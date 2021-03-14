@@ -74,15 +74,10 @@ class App extends Component {
     }
   };
 
-  getQuery = (query) => {
-    // console.log(query);
-    this.setState({ query });
-  };
-
   render() {
     return (
       <div>
-        <SearchBar onSubmit={this.handleSubmitForm} />
+        <SearchBar handleSubmitForm={this.handleSubmitForm} />
         {this.state.gallery.length === 0 ? (
           <h1 className="title">Enter your query</h1>
         ) : (
@@ -94,7 +89,7 @@ class App extends Component {
         {this.state.modal && (
           <Modal
             showModal={this.showModal}
-            clouseModal={this.closeModal}
+            closeModal={this.closeModal}
             img={this.state.modalAbout}
           />
         )}
